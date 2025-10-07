@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e0f7fa;
+    margin: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+  }
+  
+  #game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #toilet {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+  }
+  
+  #head {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    transform: translate(-50%, -50%) rotateZ(0deg) rotateX(0deg);
+    transform-origin: center bottom; /* rotateX tilts from bottom */
+    z-index: 1;
+    transition: top 0.1s, transform 0.1s;
+  }
+  
+  
+  #meter {
+    width: 300px;
+    height: 20px;
+    border: 2px solid #000;
+    margin-top: 250px;
+    background: linear-gradient(to right, #00e676 var(--fill, 0%), transparent 0%);
+  }
+  
+  #timer {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  #start-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #00796b;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  #start-btn:hover {
+    background-color: #004d40;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #scoreboard {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  /* Prevent blue selection / dragging of images */
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    pointer-events: none; /* optional – prevents click/drag events on the image itself */
+  }
+
+  * {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.splash {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  margin-top: 150px;
+  margin-left: 700px;
+  background: radial-gradient(circle, #00bfff 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.8;
+  transform: scale(1);
+  animation: splashAnim 0.5s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes splashAnim {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+#game-title {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #070000; /* or any color you like */
+  user-select: none; /* prevents text selection */
+  pointer-events: none; /* text won't interfere with mouse */
+  z-index: 1000; /* on top of other elements */
+}

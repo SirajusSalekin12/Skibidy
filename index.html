@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spin the Head</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-title">Dunk him to shut him up!</div>
+  <div id="game-container">
+    <audio id="bg-sound" src="song.mp3" loop></audio>
+    <audio id="splash-sound" src="splash.mp3" preload="auto"></audio>
+    <audio id="flush-sound" src="flush.mp3"></audio>
+    <audio id="scream-sound" src="scream.mp3"></audio>
+
+    <div id="toilet">
+      <img id="head" src="head.png" alt="Head" />
+      <img src="toilet.png" width="200" alt="Toilet" />
+    </div>
+
+    <div id="meter"></div>
+    <div id="timer">Time: 0.00s</div>
+
+    <button id="start-btn">Start</button>
+    <div id="scoreboard" class="hidden">
+      <p id="final-time"></p>
+      <p id="best-time"></p>
+    </div>
+    
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
